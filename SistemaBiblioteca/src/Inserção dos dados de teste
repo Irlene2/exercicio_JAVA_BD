@@ -1,0 +1,40 @@
+-- CADASTRO DOS ITENS
+
+INSERT INTO item
+(codigo, titulo, tipo, autor, edicao, disponivel)
+VALUES
+('L001', 'Dom Casmurro', 'livro',
+ 'Machado de Assis', NULL, FALSE),
+
+('L002', 'O Pequeno Príncipe', 'livro',
+ 'Antoine de Saint-Exupéry', NULL, TRUE),
+
+('R001', 'Revista Ciência', 'revista',
+ NULL, 'Edição 10', FALSE),
+
+('R002', 'Revista Tecnologia', 'revista',
+ NULL, 'Edição 25', TRUE);
+
+
+-- CADASTRO DOS USUÁRIOS
+
+INSERT INTO usuario
+(nome, tipo, limite_itens)
+VALUES
+('Maria Silva', 'aluno', 3),
+
+('João Santos', 'professor', 5);
+
+
+-- CADASTRO DOS EMPRÉSTIMOS
+
+INSERT INTO emprestimo
+(item_id, usuario_id, data_retirada,
+ data_devolucao_prevista, data_devolucao, valor_multa)
+VALUES
+
+(1, 1, '2026-11-01', '2026-11-15',
+ NULL, 0.00),
+
+(3, 2, '2026-10-01', '2026-10-08',
+ '2026-10-10', 2.00);
